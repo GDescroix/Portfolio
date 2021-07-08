@@ -16,6 +16,7 @@ ul {
     .b-screen {
         display: block;
     }
+
     .s-screen {
         display: none;
     }
@@ -25,6 +26,7 @@ ul {
     .b-screen {
         display: none;
     }
+
     .s-screen {
         display: block;
     }
