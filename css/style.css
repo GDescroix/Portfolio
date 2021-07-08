@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(200, 200, 200);
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@media screen and (min-width: 769px) {
+    .b-screen {
+        display: block;
+    }
+    .s-screen {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .b-screen {
+        display: none;
+    }
+    .s-screen {
+        display: block;
+    }
+}
