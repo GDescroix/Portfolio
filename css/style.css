@@ -2,30 +2,35 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(200, 200, 200);
+main {
     margin: 0;
     padding: 0;
 }
 
-ul {
-    list-style-type: none;
+header {
+    position: relative;
+    background-color: black;
+    height: 7rem;
 }
 
-@media screen and (min-width: 769px) {
-    .b-screen {
-        display: block;
-    }
-    .s-screen {
-        display: none;
-    }
+section {
+    position: relative;
+    background-color: rgb(200, 200, 200);
 }
 
-@media screen and (max-width: 768px) {
-    .b-screen {
-        display: none;
-    }
-    .s-screen {
-        display: block;
+footer {
+    position: relative;
+    background-color: red;
+}
+
+.ghub {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@media screen and (max-width: 739px) {
+    header img {
+        width: 5rem;
     }
 }
