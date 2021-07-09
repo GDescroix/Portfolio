@@ -10,6 +10,43 @@ body {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.infos img {
+    position: relative;
+}
+
+.texte {
+    font-size: 2rem;
+}
+
+.maildescrip {
+    display: inline-block;
+    position: relative;
+}
+
+.texteA {
+    left: 65%;
+    transform: translate(-65%, 0%);
+    text-align: center;
+}
+
+.texteB {
+    left: 35%;
+    transform: translate(-35%, 0%);
+    text-align: center;
+}
+
+.infos #desc {
+    left: 23%;
+    transform: translate(-23%, 0%);
+}
+
+.infos #mail {
+    left: 65%;
+    transform: translate(-65%, 0%);
 }
 
 @media screen and (min-width: 769px) {
