@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html,
+main {
+    background-color: rgb(200, 200, 200);
+}
+
 main {
     margin: 0;
     padding: 0;
@@ -15,22 +20,35 @@ header {
 
 section {
     position: relative;
-    background-color: rgb(200, 200, 200);
 }
 
 footer {
     position: relative;
-    background-color: red;
+}
+
+.logo,
+.ghub,
+.menub {
+    position: absolute;
+    top: 50%;
+}
+
+.logo {
+    left: 5%;
+    transform: translate(-5%, -50%);
+    max-width: 4.5rem;
 }
 
 .ghub {
-    position: absolute;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
+    max-width: 5rem;
 }
 
-@media screen and (max-width: 739px) {
-    header img {
-        width: 5rem;
-    }
+.menub {
+    right: 0;
+    transform: translate(0, -50%);
+    max-width: 5rem;
 }
+
+@media screen and (min-width: 739px) {}
