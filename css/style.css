@@ -4,6 +4,7 @@
 
 body {
     background-color: rgb(200, 200, 200);
+    max-height: 110%;
     margin: 0;
     padding: 0;
 }
@@ -50,6 +51,9 @@ ul {
 }
 
 @media screen and (min-width: 769px) {
+    :root {
+        font-size: 1.1rem;
+    }
     .b-screen {
         display: block;
     }
@@ -60,6 +64,9 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
+    :root {
+        font-size: 15px;
+    }
     .b-screen {
         display: none;
     }
