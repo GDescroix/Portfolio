@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Times New Roman', Times, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 html,
 main {
     background-color: rgb(200, 200, 200);
@@ -19,10 +26,12 @@ header {
 }
 
 section {
+    padding: 1rem;
     position: relative;
 }
 
 footer {
+    padding: 1rem;
     position: relative;
 }
 
@@ -51,4 +60,203 @@ footer {
     max-width: 5rem;
 }
 
-@media screen and (min-width: 739px) {}
+.descript {
+    padding: 1rem;
+    max-width: 7rem;
+    position: absolute;
+    top: 9rem;
+}
+
+.txtdescript {
+    position: absolute;
+    left: 6.5rem;
+    top: 2.7rem;
+}
+
+.mail {
+    padding: 1rem;
+    max-width: 6rem;
+    position: absolute;
+    top: 17rem;
+}
+
+.mailtxt {
+    position: absolute;
+    left: 6.5rem;
+    top: 18.2rem;
+}
+
+.projet {
+    position: absolute;
+    top: 24rem;
+    margin: 1rem;
+}
+
+#footer {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+#footer a,
+#footer p {
+    position: relative;
+    top: 0.65rem;
+    color: white;
+    text-align: center;
+}
+
+.parcours,
+.competences {
+    display: none;
+}
+
+a:any-link {
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        font-size: 18px;
+    }
+
+    .menub {
+        right: 1rem;
+    }
+
+    .descript,
+    .mail {
+        left: 2rem;
+    }
+
+    .descript {
+        top: 10rem;
+    }
+
+    .mail {
+        top: 19rem;
+    }
+
+    .txtdescript {
+        top: 4.1rem;
+        left: 8.5rem;
+        max-width: 30rem;
+    }
+
+    .mailtxt {
+        top: 20.2rem;
+        left: 8.5rem;
+    }
+
+    .projet {
+        top: 26rem;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    main p {
+        font-size: 22px;
+    }
+
+    .menub {
+        display: none;
+    }
+
+    .logo {
+        left: 3rem;
+    }
+
+    .descript,
+    .mail {
+        left: 1rem;
+    }
+
+    .txtdescript {
+        top: 4.5rem;
+        left: 7rem;
+    }
+
+    .mailtxt {
+        top: 20.2rem;
+        left: 7rem;
+    }
+
+    .projet {
+        max-width: 35rem;
+        top: 8rem;
+        right: 2rem;
+    }
+
+    .parcours,
+    .competences {
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        font-size: 28px;
+    }
+
+    .parcours {
+        right: 15rem;
+    }
+
+    .competences {
+        right: 5rem;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    main p {
+        font-size: 24px;
+    }
+
+    .menub {
+        display: none;
+    }
+
+    .logo {
+        left: 3rem;
+    }
+
+    .descript,
+    .mail {
+        left: 1rem;
+    }
+
+    .txtdescript {
+        top: 3.5rem;
+        left: 7rem;
+    }
+
+    .mailtxt {
+        top: 19.9rem;
+        left: 7rem;
+    }
+
+    .projet {
+        max-width: 60rem;
+        top: 10rem;
+        right: 2rem;
+    }
+
+    .parcours,
+    .competences {
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        font-size: 28px;
+    }
+
+    .parcours {
+        right: 15rem;
+    }
+
+    .competences {
+        right: 5rem;
+    }
+}
