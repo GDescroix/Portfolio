@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Portfolio</title>
 </head>
@@ -23,21 +24,32 @@
     </header>
 
     <main>
-        <div class="image">
-            <img src="./img/descript.png" alt="descriptpng" width="100%" class="descript">
+        <div class="wrapper">
+            <div class="case1 c1i">
+                <img src="./img/descript.png" alt="descript" width="100%">
+            </div>
+            <div class="case2 c2i">
+                <span>Je m'appelle Guy Descroix, je suis actuellement en formation chez OnlineFormaPro pour décrocher un
+                    titre RNCP (Bac2+) de Web Designer.</span>
+            </div>
+            <div class="case3 c3i">
+                <img src="./img/mail.png" alt="mail" width="100%">
+            </div>
+            <div class="case4 c4i">
+                <span>Guydcx@gmail.com</span>
+            </div>
         </div>
-        <section>
-            <p class="txtdescript">J'me présente, je m'appelle Guy, j'voudrais bien, réussir ma viiie. Être
-                payéééééééééé !</p>
-        </section>
-        <div class="image">
-            <img src="./img/mail.png" alt="email" class="mail" width="100%">
-        </div>
-        <div class="mailtxt">
-            <p>Mon email : guydcx@gmail.com</p>
-        </div>
-        <div class="projet">
-            <img src="./img/PrezGuyChris.png" alt="prezGC" width="100%">
+        <div class="diapo">
+            <div class="elements">
+                <div class="element active">
+                    <img src="./img/Jour1Forma.png" alt="Image 1">
+                </div>
+                <div class="element">
+                    <img src="./img/PrezGuyChris.png" alt="Image 2">
+                </div>
+            </div>
+            <i id="nav-gauche" class="las la-chevron-left">&lt;</i>
+            <i id="nav-droite" class="las la-chevron-right">&gt;</i>
         </div>
     </main>
 
