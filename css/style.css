@@ -205,8 +205,17 @@ a:any-link {
     width: 100%;
 }
 
-.cwrap {
+.comwrap img {
+    max-width: 6rem;
+}
+
+.comwrap {
     row-gap: 3rem;
+    column-gap: 1rem;
+}
+
+.cspan {
+    margin-top: .3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -303,6 +312,10 @@ a:any-link {
     .c10c {
         grid-column: 1;
         grid-row: 6;
+    }
+
+    .comwrap>img {
+        max-width: 16rem;
     }
 }
 
