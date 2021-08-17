@@ -314,8 +314,20 @@ a:any-link {
         grid-row: 6;
     }
 
-    .comwrap>img {
+    .comwrap img {
         max-width: 16rem;
+    }
+
+    .comwrap>.case1,
+    .comwrap>.case3,
+    .comwrap>.case5 {
+        margin-left: 2rem;
+    }
+
+    .comwrap>.case2,
+    .comwrap>.case4,
+    .comwrap>.case6 {
+        text-align: center;
     }
 }
 
@@ -370,22 +382,47 @@ a:any-link {
 
     .c3i,
     .c1i {
+        margin-left: 6rem;
         margin-right: 0;
         width: max-content;
     }
 
     .c2i {
-        margin-left: -18rem;
+        margin-left: 2rem;
+        margin-right: 8rem;
         margin-top: 3.5rem;
         font-size: 20px;
-        width: max-content;
+        width: fit-content;
     }
 
     .c4i {
-        margin-left: -18rem;
+        margin-left: 2rem;
+        margin-right: 8rem;
         margin-top: 2rem;
         font-size: 20px;
-        width: max-content;
+        width: fit-content;
+    }
+
+
+    .c1c,
+    .c3c,
+    .c5c,
+    .c7c,
+    .c9c {
+        margin-left: 9.5rem;
+    }
+
+    .c2c,
+    .c4c,
+    .c6c,
+    .c8c,
+    .c10c {
+        margin-left: 6.5rem;
+    }
+
+    .c1c {
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .c2c {
@@ -435,5 +472,9 @@ a:any-link {
 
     .wrapper {
         row-gap: 5rem;
+    }
+
+    .cwrap {
+        row-gap: 1rem;
     }
 }
