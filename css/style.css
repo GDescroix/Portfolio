@@ -671,4 +671,13 @@ a:any-link {
     .c2c {
         margin-bottom: 7rem;
     }
+
+    .c1i,
+    .c3i {
+        margin-left: 10rem;
+    }
+
+    .c4i {
+        margin-right: 10rem;
+    }
 }
