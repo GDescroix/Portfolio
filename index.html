@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/script.js" defer></script>
+    <script src="./js/burger.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Portfolio</title>
 </head>
@@ -20,7 +21,20 @@
         </a>
         <a href="./html/parcours.html" class="parcours">Parcours</a>
         <a href="./html/competences.html" class="competences">Compétences</a>
-        <img src="./img/burger menu (gdescroix).svg" alt="menuburger" class="menub" width="100%">
+
+        <button class="ham">
+            <span class="menuIcon material-icons">
+                <img src="./img/burger_open.svg" alt="openburger" width="100%">
+            </span>
+            <span class="xIcon material-icons">
+                <img src="./img/burger_close.svg" alt="closeburger" width="100%">
+            </span>
+        </button>
+        <ul class="menu">
+            <li><a class="menuLink" href="./index.html">Accueil</a></li>
+            <li><a class="menuLink" href="./html/competences.html">Compétences</a></li>
+            <li><a class="menuLink" href="./html/parcours.html">Parcours</a></li>
+        </ul>
     </header>
 
     <main>
@@ -29,8 +43,8 @@
                 <img src="./img/descript.png" alt="descript" width="100%">
             </div>
             <div class="case2 c2i">
-                <span>Je m'appelle Guy Descroix, je suis actuellement en formation chez OnlineFormaPro pour décrocher un
-                    titre RNCP (Bac2+) de Web Designer.</span>
+                <span>Je m'appelle Guy Descroix, je suis un jeune développeur actuellement en formation chez OnlineFormaPro pour décrocher un
+                    titre RNCP (Bac +2) de Web Designer.</span>
             </div>
             <div class="case3 c3i">
                 <img src="./img/mail.png" alt="mail" width="100%">
