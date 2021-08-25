@@ -60,7 +60,7 @@ section {
 }
 
 .ham {
-    position: fixed;
+    position: absolute;
     z-index: 100;
     top: .5rem;
     right: 0;
@@ -97,7 +97,7 @@ section {
 }
 
 li {
-    padding: 1rem 0;
+    padding: .5rem 0;
 }
 
 .menuLink {
@@ -147,7 +147,10 @@ a:any-link {
 .case3,
 .case5,
 .case7,
-.case9 {
+.case9,
+.case11,
+.case13,
+.case15 {
     margin-left: 1rem;
 }
 
@@ -155,7 +158,10 @@ a:any-link {
 .case4,
 .case6,
 .case8,
-.case10 {
+.case10,
+.case12,
+.case14,
+.case16 {
     margin-top: 1rem;
 }
 
@@ -214,6 +220,36 @@ a:any-link {
     grid-row: 5;
 }
 
+.case11 {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.case12 {
+    grid-column: 2;
+    grid-row: 6;
+}
+
+.case13 {
+    grid-column: 1;
+    grid-row: 7;
+}
+
+.case14 {
+    grid-column: 2;
+    grid-row: 7;
+}
+
+.case15 {
+    grid-column: 1;
+    grid-row: 8;
+}
+
+.case16 {
+    grid-column: 2;
+    grid-row: 8;
+}
+
 .proj {
     max-width: 90%;
     margin-left: 5%;
@@ -234,6 +270,7 @@ a:any-link {
     transform: translateY(-50%);
     color: white;
     font-size: 3em;
+    cursor: pointer;
 }
 
 #nav-droite {
@@ -351,11 +388,18 @@ a:any-link {
         margin-top: 2rem;
     }
 
+    .c2i {
+        margin-top: 2.5rem;
+    }
+
     .c1c,
     .c3c,
     .c5c,
     .c7c,
-    .c9c {
+    .c9c,
+    .c11c,
+    .c13c,
+    .c15c {
         margin-bottom: 0;
         margin-left: 7.6rem;
         margin-right: 0;
@@ -365,7 +409,10 @@ a:any-link {
     .c4c,
     .c6c,
     .c8c,
-    .c10c {
+    .c10c,
+    .c12c,
+    .c14c,
+    .c16c {
         margin-top: 0;
         margin-bottom: 3rem;
         margin-left: 4rem;
@@ -417,6 +464,36 @@ a:any-link {
         grid-row: 6;
     }
 
+    .c11c {
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    .c12c {
+        grid-column: 2;
+        grid-row: 6;
+    }
+
+    .c13c {
+        grid-column: 1;
+        grid-row: 7;
+    }
+
+    .c14c {
+        grid-column: 1;
+        grid-row: 8;
+    }
+
+    .c15c {
+        grid-column: 2;
+        grid-row: 7;
+    }
+
+    .c16c {
+        grid-column: 2;
+        grid-row: 8;
+    }
+
     .comwrap img {
         max-width: 16rem;
     }
@@ -437,6 +514,10 @@ a:any-link {
     .c4p,
     .c6p {
         margin-top: 2.5rem;
+    }
+
+    .logo {
+        max-width: 4.3rem;
     }
 }
 
@@ -510,7 +591,6 @@ a:any-link {
         margin-left: .5rem;
         margin-top: 1.9rem;
         font-size: 20px;
-        width: fit-content;
     }
 
     .c4i {
@@ -518,7 +598,6 @@ a:any-link {
         margin-right: 8rem;
         margin-top: 3.5rem;
         font-size: 20px;
-        width: fit-content;
         grid-column: 4;
         grid-row: 1;
     }
@@ -527,7 +606,10 @@ a:any-link {
     .c3c,
     .c5c,
     .c7c,
-    .c9c {
+    .c9c,
+    .c11c,
+    .c13c,
+    .c15c {
         margin-left: 9.5rem;
     }
 
@@ -535,7 +617,10 @@ a:any-link {
     .c4c,
     .c6c,
     .c8c,
-    .c10c {
+    .c10c,
+    .c12c,
+    .c14c,
+    .c16c {
         margin-left: 6.5rem;
     }
 
@@ -587,6 +672,36 @@ a:any-link {
     .c10c {
         grid-column: 2;
         grid-row: 4;
+    }
+
+    .c11c {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .c12c {
+        grid-column: 3;
+        grid-row: 4;
+    }
+
+    .c13c {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .c14c {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .c15c {
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    .c16c {
+        grid-column: 2;
+        grid-row: 6;
     }
 
     .wrapper {
@@ -653,12 +768,14 @@ a:any-link {
 @media screen and (min-width: 1600px) {
 
     .c1c,
-    .c7c {
+    .c7c,
+    .c13c {
         margin-left: 17rem;
     }
 
     .c2c,
-    .c8c {
+    .c8c,
+    .c14c {
         margin-left: 14rem;
     }
 
@@ -668,7 +785,8 @@ a:any-link {
         margin-top: 3rem;
     }
 
-    .c2c {
+    .c2c,
+    .c8c {
         margin-bottom: 7rem;
     }
 
@@ -677,7 +795,19 @@ a:any-link {
         margin-left: 10rem;
     }
 
+    .c2i {
+        margin-top: 3rem;
+    }
+
     .c4i {
         margin-right: 10rem;
+    }
+
+    .ghub>img {
+        width: 6rem;
+    }
+
+    .logo {
+        max-width: 5rem;
     }
 }
