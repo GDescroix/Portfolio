@@ -523,6 +523,11 @@ a:any-link {
 
 @media screen and (min-width: 1280px) {
 
+    .diapo {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
     .menu {
         display: none;
     }
@@ -766,6 +771,11 @@ a:any-link {
 }
 
 @media screen and (min-width: 1600px) {
+    
+    .diapo {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
 
     .c1c,
     .c7c,

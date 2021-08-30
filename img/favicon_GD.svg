@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300mm"
+   height="300mm"
+   viewBox="0 0 300 300"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="favicon_GD.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     width="300mm"
+     inkscape:zoom="0.41799165"
+     inkscape:cx="412.68767"
+     inkscape:cy="551.44642"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="308"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#646464;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="path845"
+       sodipodi:type="arc"
+       sodipodi:cx="150.0004"
+       sodipodi:cy="149.99927"
+       sodipodi:rx="149.9996"
+       sodipodi:ry="149.99907"
+       sodipodi:start="0.046328194"
+       sodipodi:end="6.2831853"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 299.83906,156.94597 A 149.9996,149.99907 0 0 1 144.78954,299.9078 149.9996,149.99907 0 0 1 0.04103469,146.52499 149.9996,149.99907 0 0 1 151.73766,0.01025897 149.9996,149.99907 0 0 1 300,149.99927" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180.555px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.25693"
+       x="-26.321033"
+       y="242.23218"
+       id="text2143"
+       transform="rotate(-14.283928)"><tspan
+         sodipodi:role="line"
+         id="tspan2141"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180.555px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:2.25693"
+         x="-26.321033"
+         y="242.23218">GD</tspan></text>
+  </g>
+</svg>
