@@ -299,6 +299,10 @@ a:any-link {
     width: 100%;
 }
 
+.img_diapo {
+    border-radius: 16px 16px 16px 16px;
+}
+
 .comwrap img {
     max-width: 9rem;
 }
@@ -800,11 +804,21 @@ a:any-link {
 
     .comwrap {
         row-gap: 0;
+        font-size: 22px;
     }
 
     .comwrap img {
-        max-width: 15rem;
+        max-width: 20rem;
     }
+
+    .cwrap {
+        font-size: 20px;
+    }
+
+    .cwrap img {
+        max-width: 8rem;
+    }
+
 }
 
 @media screen and (min-width: 1600px) {
@@ -857,4 +871,5 @@ a:any-link {
     .logo {
         max-width: 5rem;
     }
+
 }
