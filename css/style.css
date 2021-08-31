@@ -354,6 +354,43 @@ a:any-link {
     margin-bottom: 1.5rem;
 }
 
+
+.overline {
+    position: relative;
+    background-color: black;
+    font-size: 70px;
+    width: max-content;
+    z-index: 0;
+}
+
+.overline::before,
+.overline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    transition: 1.5s;
+}
+
+.overline::before {
+    background-color: rgba(255, 0, 0, 0.5);
+    left: -4px;
+    top: -4px;
+}
+
+.overline::after {
+    background-color: rgba(255, 0, 255, 0.5);
+    right: -4px;
+    bottom: -4px;
+}
+
+.overline:hover::before,
+.overline:hover::after {
+    width: calc(100% + 8px);
+    height: calc(80% + 8px);
+}
+
 @media screen and (min-width: 740px) {
     :root {
         font-size: 18px;
