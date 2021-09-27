@@ -364,11 +364,8 @@ footer .my_info .infos a img {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  main .proj_cards .project_card {
-    margin-left: 4rem;
-    margin-right: 4rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+  main .proj_cards .marg_proj {
+    margin-left: 1.5rem;
   }
   main .proj_cards .project_card:hover {
     -webkit-transition: 1s;

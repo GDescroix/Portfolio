@@ -354,11 +354,11 @@ footer {
             display: flex;
             flex-direction: row;
 
+            .marg_proj {
+                margin-left: 1.5rem;
+            }
+
             .project_card {
-                margin-left: 4rem;
-                margin-right: 4rem;
-                margin-top: 1.5rem;
-                margin-bottom: 1.5rem;
 
                 &:hover {
                     transition: 1s;
