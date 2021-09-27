@@ -45,6 +45,11 @@ header {
         border: solid 2px white;
         border-radius: 6px;
 
+        &:hover {
+            transition: 1s;
+            transform: scale(1.1);
+        }
+
         .name {
             display: flex;
             color: white;
@@ -63,18 +68,23 @@ main {
     }
 
     .card_info {
-        margin: 1rem;
+        display: flex;
+        margin: 5%;
         padding: .2rem;
         margin-bottom: 3rem;
 
         .card_prez {
             display: flex;
             flex-direction: row;
-            margin-bottom: 1rem;
+            align-items: center;
 
             img {
-                margin: .2rem;
-                max-width: 6rem;
+                margin-right: 1rem;
+                max-width: 4rem;
+            }
+
+            span {
+                max-width: 70%;
             }
         }
 
@@ -98,7 +108,7 @@ main {
     .card_comp {
         display: flex;
         flex-direction: row;
-        margin: 1rem;
+        margin: 5%;
         padding: .2rem;
         margin-bottom: 2.5rem;
 
@@ -133,12 +143,13 @@ main {
     }
 
     .proj_cards {
+        margin: 5%;
         margin-bottom: 2rem;
 
         .project_card {
             display: flex;
-            margin: 2rem;
             background-color: black;
+            margin-bottom: 2rem;
 
             figure {
                 border: solid 4px #ff5d00;
@@ -237,11 +248,11 @@ footer {
 
             .card_prez {
                 img {
-                    max-width: 8rem;
+                    max-width: 6rem;
                 }
 
                 span {
-                    margin-top: 1rem;
+                    max-width: 100%;
                     font-size: 26px;
                 }
             }

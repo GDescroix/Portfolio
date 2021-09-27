@@ -69,6 +69,13 @@ header .card_name {
   border-radius: 6px;
 }
 
+header .card_name:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 header .card_name .name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,7 +92,10 @@ main .titre {
 }
 
 main .card_info {
-  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5%;
   padding: .2rem;
   margin-bottom: 3rem;
 }
@@ -98,12 +108,18 @@ main .card_info .card_prez {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .card_info .card_prez img {
-  margin: .2rem;
-  max-width: 6rem;
+  margin-right: 1rem;
+  max-width: 4rem;
+}
+
+main .card_info .card_prez span {
+  max-width: 70%;
 }
 
 main .card_info .mail_card {
@@ -139,7 +155,7 @@ main .card_comp {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 1rem;
+  margin: 5%;
   padding: .2rem;
   margin-bottom: 2.5rem;
   display: flex;
@@ -186,6 +202,7 @@ main .card_comp .first_card_dual {
 }
 
 main .proj_cards {
+  margin: 5%;
   margin-bottom: 2rem;
 }
 
@@ -193,8 +210,8 @@ main .proj_cards .project_card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem;
   background-color: black;
+  margin-bottom: 2rem;
 }
 
 main .proj_cards .project_card figure {
@@ -283,10 +300,10 @@ footer .my_info .infos a img {
     font-size: 3rem;
   }
   main .card_info .card_prez img {
-    max-width: 8rem;
+    max-width: 6rem;
   }
   main .card_info .card_prez span {
-    margin-top: 1rem;
+    max-width: 100%;
     font-size: 26px;
   }
   main .card_info .mail_card img {
