@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/script.js" defer></script>
-    <script src="./js/burger.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@300&display=swap" rel="stylesheet"> 
     <link rel="icon" href="./img/favicon_GD.svg">
     <link rel="stylesheet" href="./css/style.css">
     <title>Portfolio</title>
@@ -14,67 +13,112 @@
 
 <body>
     <header>
-        <a href="./index.html">
-            <img src="./img/LogoGD.svg" alt="logoGD" class="logo" width="100%">
-        </a>
-        <a href="https://github.com/GDescroix" class="ghub">
-            <img src="./img/ghub.png" alt="github" width="100%">
-        </a>
-        <a href="./html/parcours.html" class="parcours btn">Parcours</a>
-        <a href="./html/competences.html" class="competences">Compétences</a>
-
-        <button class="ham">
-            <span class="menuIcon material-icons">
-                <img src="./img/burger_open.svg" alt="openburger" width="100%">
-            </span>
-            <span class="xIcon material-icons">
-                <img src="./img/burger_close.svg" alt="closeburger" width="100%">
-            </span>
-        </button>
-        <ul class="menu">
-            <li><a class="menuLink" href="./index.html">Accueil</a></li>
-            <li><a class="menuLink" href="./html/competences.html">Compétences</a></li>
-            <li><a class="menuLink" href="./html/parcours.html">Parcours</a></li>
-        </ul>
+        <img src="./img/logo/LogoGD.svg" alt="logo" width="100%" class="logo">
+        <div class="card_name">
+            <p class="name">DESCROIX</p>
+            <p class="name">Guy</p>
+        </div>
     </header>
 
     <main>
-        <div class="wrapper">
-            <div class="case1 c1i">
+
+        <h1 class="titre">Présentation</h1>
+        <div class="card_info">
+            <div class="card_prez">
                 <img src="./img/descript.png" alt="descript" width="100%">
-            </div>
-            <div class="case2 c2i">
                 <span>Je m'appelle Guy Descroix, je suis un jeune développeur actuellement en formation chez
                     OnlineFormaPro pour décrocher un titre RNCP (Bac +2) de Web Designer.</span>
             </div>
-            <div class="case3 c3i">
-                <img src="./img/mail.png" alt="mail" width="100%">
+        </div>
+
+        <h1 class="titre">Compétences</h1>
+        <div class="card_comp">
+            <div class="card_dual first_card_dual">
+                <img src="./img/logo/html5.png" alt="HTML5" width="100%">
+                <span>HTML5</span>
             </div>
-            <div class="case4 c4i">
-                <span>Guydcx@gmail.com</span>
+            <div class="card_dual">
+                <img src="./img/logo/css3.png" alt="CSS3" width="100%">
+                <span>CSS3</span>
+            </div>
+            <div class="card_dual">
+                <img src="./img/logo/javascript.png" alt="JS" width="100%">
+                <span>JavaScript</span>
+            </div>
+            <div class="card_dual">
+                <img src="./img/logo/bootstrap.png" alt="BSTRAP" width="100%">
+                <span>Bootstrap</span>
+            </div>
+            <div class="card_dual">
+                <img src="./img/logo/wrdprss.png" alt="WordPress" width="100%">
+                <span>WordPress</span>
+            </div>
+            <div class="card_dual">
+                <img src="./img/logo/ghub.png" alt="GitKraken" width="100%">
+                <span>Github</span>
+            </div>
+            <div class="card_dual">
+                <img src="./img/logo/gimp.png" alt="Gimp" width="100%">
+                <span>Gimp</span>
+            </div>
+            <div class="card_dual">
+                <img src="./img/logo/inkscape.png" alt="Inkscape" width="100%">
+                <span>Inkscape</span>
             </div>
         </div>
-        <div class="diapo">
-            <div class="elements">
-                <div class="element active">
-                    <a href="https://gdescroix.github.io/projet_presentation/" target="_blank">
-                        <img src="./img/PrezGuyChris.png" alt="Image 2" class="img_diapo" width="100%">
+
+        <h1 class="titre">Projets</h1>
+        <div class="proj_cards">
+            <div class="project_card">
+                <figure>
+                    <a href="https://github.com/GDescroix/projet_presentation" target="_blank">
+                        <img src="./img/PrezGuyChris.png" alt="projetPrez" width="100%">
                     </a>
-                </div>
-                <div class="element">
-                    <a href="https://gdescroix.github.io/SaumHotel/" target="_blank">
-                        <img src="./img/Hotel_M-G.png" alt="Image 2" class="img_diapo" width="100%">
-                    </a>
-                </div>
+                    <figcaption>Projet de présentation et de découverte du HTML/CSS</figcaption>
+                </figure>
             </div>
-            <i id="nav-gauche" class="las la-chevron-left">&lt;</i>
-            <i id="nav-droite" class="las la-chevron-right">&gt;</i>
+            <div class="project_card">
+                <figure>
+                    <a href="https://github.com/GDescroix/ACS_Music" class="car_card" target="_blank">
+                        <img src="./img/ACS_MUSIC/index.png" alt="ACS_MUSIC" width="100%">
+                        <img src="./img/ACS_MUSIC/accueil.png" alt="ACS_MUSIC" width="100%">
+                        <img src="./img/ACS_MUSIC/play.png" alt="ACS_MUSIC" width="100%">
+                    </a>
+                    <figcaption>Projet de site web au format mobile permettant d'écouter des musiques via une API
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="proj_cards">
+            <div class="project_card">
+                <figure>
+                    <a href="https://github.com/GDescroix/SaumHotel" target="_blank">
+                        <img src="./img/Hotel_M-G.png" alt="Projet Hotel" width="100%">
+                    </a>
+                    <figcaption>Projet de création d'un site de réservation d'hôtel fonctionnel</figcaption>
+                </figure>
+            </div>
+        </div>
         </div>
     </main>
 
-    <footer id="footer">
-        <p>Site sous &copy de Descroix Guy</p>
+    <footer>
+        <div class="contact_card">
+            <h1 class="contact">Contactez moi</h1>
+            <textarea name="message" id="contact_mail" cols="30" rows="10" placeholder="Votre message ..."></textarea>
+            <button class="my_btn" type="submit">Envoyer</button>
+        </div>
+        <div class="my_info">
+            <h1>A propos</h1>
+            <div class="infos">
+                <p>Mon mail : Guydcx@gmail.com</p>
+                <p>Mes réseaux :</p>
+                <a href="" target="_blank"><img src="./img/logo/Twitter social icons - rounded square - blue.png" alt="" width="100%"></a>
+                <a href="https://www.linkedin.com/in/guy-descroix/" target="_blank"><img src="./img/logo/LI-In-Bug.png" alt="" width="100%"></a>
+            </div>
+        </div>
     </footer>
+
 </body>
 
 </html>

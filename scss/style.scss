@@ -1,0 +1,386 @@
+@import "variable";
+@import "mixin";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+span {
+    font-family: 'Yaldevi', sans-serif;
+}
+
+figcaption {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-family: 'Yaldevi', sans-serif;
+    font-weight: 700;
+}
+
+header {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+
+    .logo {
+        @include flexLogo;
+        max-width: 4rem;
+        margin: 8px;
+    }
+
+    .card_name {
+        @include flexCenter;
+        flex-direction: column;
+        margin: 8px;
+        padding: 6px;
+        border: solid 2px white;
+        border-radius: 6px;
+
+        .name {
+            display: flex;
+            color: white;
+            font-size: 24px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    }
+}
+
+main {
+
+    .titre {
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .card_info {
+        margin: 1rem;
+        padding: .2rem;
+        margin-bottom: 3rem;
+
+        .card_prez {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 1rem;
+
+            img {
+                margin: .2rem;
+                max-width: 6rem;
+            }
+        }
+
+        .mail_card {
+            display: flex;
+            flex-direction: row;
+
+            img {
+                margin: .2rem;
+                max-width: 4rem;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                padding: .5rem;
+            }
+        }
+    }
+
+    .card_comp {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem;
+        padding: .2rem;
+        margin-bottom: 2.5rem;
+
+        display: flex;
+        overflow-x: auto;
+
+        .card_dual {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 2rem;
+            padding: .5rem;
+
+            span {
+                display: flex;
+                align-items: center;
+                font-size: 26px;
+            }
+
+            img {
+                display: flex;
+                width: 4rem;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .first_card_dual {
+            margin-left: 0;
+        }
+
+    }
+
+    .proj_cards {
+        margin-bottom: 2rem;
+
+        .project_card {
+            display: flex;
+            margin: 2rem;
+            background-color: black;
+
+            figure {
+                border: solid 4px #ff5d00;
+
+                .car_card {
+                    display: flex;
+                    overflow-x: auto;
+                }
+
+                figcaption {
+                    background-color: black;
+                    color: white;
+                    padding: 4px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: black;
+
+    .contact_card {
+        padding: 5%;
+
+        .contact {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        .my_btn {
+            margin-top: .5rem;
+            font-size: large;
+            padding: 5px;
+        }
+    }
+
+    .my_info {
+        padding: 5%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .infos {
+            border: solid 2px white;
+            padding: 6px;
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                img {
+                    max-width: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 760px) {
+
+    header {
+
+        .logo {
+            max-width: 6rem;
+            margin: 2%;
+        }
+
+        .card_name {
+            margin: 2%;
+
+            .name {
+                font-size: 32px;
+            }
+        }
+    }
+
+    main {
+
+        .titre {
+            font-size: 3rem;
+        }
+
+        .card_info {
+
+            .card_prez {
+                img {
+                    max-width: 8rem;
+                }
+
+                span {
+                    margin-top: 1rem;
+                    font-size: 26px;
+                }
+            }
+
+            .mail_card {
+                img {
+                    max-width: 7rem;
+                }
+
+                span {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .proj_cards {
+            .project_card {
+                figure {
+                    figcaption {
+                        font-size: 24px;
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .contact_card {
+            textarea {
+                font-size: 20px;
+            }
+        }
+
+        .my_info {
+            .infos {
+                font-size: 18px;
+
+                a {
+                    img {
+                        max-width: 7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    header {
+        .logo {
+            max-width: 8rem;
+        }
+
+        .card_name {
+            .name {
+                font-size: 42px;
+            }
+        }
+    }
+
+    main {
+
+        .titre {
+            font-size: 3.5rem;
+        }
+
+        .card_info {
+            .mail_card {
+                display: none;
+            }
+
+            .card_prez {
+                span {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .card_comp {
+            .card_dual {
+
+                &:hover {
+                    transition: 1s;
+                    transform: scale(1.05);
+                }
+
+                span {
+                    font-size: 30px;
+                }
+
+                img {
+                    max-width: 6rem;
+                }
+            }
+        }
+
+        .proj_cards {
+            display: flex;
+            flex-direction: row;
+
+            .project_card {
+                margin-left: 4rem;
+                margin-right: 4rem;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+
+                &:hover {
+                    transition: 1s;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .contact_card {
+            max-width: 50%;
+        }
+
+        .my_info {
+            display: flex;
+            max-width: 50%;
+
+            p {
+                font-size: 22px;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                img {
+                    max-width: 10rem;
+                    margin: .2rem;
+                }
+            }
+        }
+    }
+}
