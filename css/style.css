@@ -35,7 +35,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: black;
+  background-color: grey;
 }
 
 header .logo {
@@ -45,8 +45,21 @@ header .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 4rem;
+  max-width: 6rem;
   margin: 8px;
+}
+
+@media (min-width: 760px) {
+  header .logo {
+    max-width: 8rem;
+    margin: 2%;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .logo {
+    max-width: 10rem;
+  }
 }
 
 header .card_name {
@@ -67,6 +80,7 @@ header .card_name {
   padding: 6px;
   border: solid 2px white;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 header .card_name:hover {
@@ -74,6 +88,12 @@ header .card_name:hover {
   transition: 1s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+@media (min-width: 760px) {
+  header .card_name {
+    margin: 2%;
+  }
 }
 
 header .card_name .name {
@@ -85,19 +105,53 @@ header .card_name .name {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+@media (min-width: 760px) {
+  header .card_name .name {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .card_name .name {
+    font-size: 42px;
+  }
+}
+
 main .titre {
   text-align: center;
   margin-bottom: 1rem;
   margin-top: 2rem;
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+}
+
+@media (min-width: 760px) {
+  main .titre {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  main .titre {
+    font-size: 3.5rem;
+  }
 }
 
 main .card_info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5%;
+  margin: auto;
+  max-width: 85%;
   padding: .2rem;
   margin-bottom: 3rem;
+}
+
+@media (min-width: 1000px) {
+  main .card_info {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
 }
 
 main .card_info .card_prez {
@@ -118,8 +172,27 @@ main .card_info .card_prez img {
   max-width: 4rem;
 }
 
+@media (min-width: 760) {
+  main .card_info .card_prez img {
+    max-width: 6rem;
+  }
+}
+
 main .card_info .card_prez span {
   max-width: 70%;
+}
+
+@media (min-width: 760px) {
+  main .card_info .card_prez span {
+    max-width: 100%;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main .card_info .card_prez span {
+    font-size: 1.8rem;
+  }
 }
 
 main .card_info .mail_card {
@@ -132,9 +205,21 @@ main .card_info .mail_card {
           flex-direction: row;
 }
 
+@media (min-width: 1000px) {
+  main .card_info .mail_card {
+    display: none;
+  }
+}
+
 main .card_info .mail_card img {
   margin: .2rem;
   max-width: 4rem;
+}
+
+@media (min-width: 760px) {
+  main .card_info .mail_card img {
+    max-width: 7rem;
+  }
 }
 
 main .card_info .mail_card span {
@@ -147,6 +232,12 @@ main .card_info .mail_card span {
   padding: .5rem;
 }
 
+@media (min-width: 760px) {
+  main .card_info .mail_card span {
+    font-size: 26px;
+  }
+}
+
 main .card_comp {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,11 +246,19 @@ main .card_comp {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 5%;
+  margin: auto;
+  max-width: 85%;
   padding: .2rem;
   margin-bottom: 2.5rem;
   display: flex;
   overflow-x: auto;
+}
+
+@media (min-width: 1000px) {
+  main .card_comp {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
 }
 
 main .card_comp .card_dual {
@@ -177,6 +276,15 @@ main .card_comp .card_dual {
   padding: .5rem;
 }
 
+@media (min-width: 1000px) {
+  main .card_comp .card_dual:hover {
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
 main .card_comp .card_dual span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,6 +293,12 @@ main .card_comp .card_dual span {
       -ms-flex-align: center;
           align-items: center;
   font-size: 26px;
+}
+
+@media (min-width: 1000px) {
+  main .card_comp .card_dual span {
+    font-size: 30px;
+  }
 }
 
 main .card_comp .card_dual img {
@@ -197,6 +311,12 @@ main .card_comp .card_dual img {
           transform: translateX(-50%);
 }
 
+@media (min-width: 1000px) {
+  main .card_comp .card_dual img {
+    max-width: 6rem;
+  }
+}
+
 main .card_comp .first_card_dual {
   margin-left: 0;
 }
@@ -206,12 +326,36 @@ main .proj_cards {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 1000px) {
+  main .proj_cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .proj_cards .marg_proj {
+    margin-left: 1.5rem;
+  }
+}
+
 main .proj_cards .project_card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: black;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 1000px) {
+  main .proj_cards .project_card:hover {
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
 }
 
 main .proj_cards .project_card figure {
@@ -231,12 +375,40 @@ main .proj_cards .project_card figure figcaption {
   padding: 4px;
 }
 
+@media (min-width: 760px) {
+  main .proj_cards .project_card figure figcaption {
+    font-size: 24px;
+    padding: 6px;
+  }
+}
+
 footer {
   background-color: black;
 }
 
+@media (min-width: 1000px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 footer .contact_card {
   padding: 5%;
+}
+
+@media (min-width: 1000px) {
+  footer .contact_card {
+    max-width: 50%;
+  }
 }
 
 footer .contact_card .contact {
@@ -247,6 +419,16 @@ footer .contact_card .contact {
 
 footer .contact_card textarea {
   width: 100%;
+}
+
+@media (min-width: 760px) {
+  footer .contact_card textarea {
+    font-size: 20px;
+  }
+}
+
+footer .contact_card #botcatcher {
+  display: none;
 }
 
 footer .contact_card .my_btn {
@@ -267,6 +449,15 @@ footer .my_info {
           flex-direction: column;
 }
 
+@media (min-width: 1000px) {
+  footer .my_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 50%;
+  }
+}
+
 footer .my_info h1 {
   text-align: center;
   margin-bottom: 1rem;
@@ -277,8 +468,21 @@ footer .my_info .infos {
   padding: 6px;
 }
 
+@media (min-width: 760px) {
+  footer .my_info .infos {
+    font-size: 18px;
+  }
+}
+
 footer .my_info .infos p {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 1000px) {
+  footer .my_info .infos p {
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
 }
 
 footer .my_info .infos a img {
@@ -286,119 +490,13 @@ footer .my_info .infos a img {
 }
 
 @media (min-width: 760px) {
-  header .logo {
-    max-width: 6rem;
-    margin: 2%;
-  }
-  header .card_name {
-    margin: 2%;
-  }
-  header .card_name .name {
-    font-size: 32px;
-  }
-  main .titre {
-    font-size: 3rem;
-  }
-  main .card_info .card_prez img {
-    max-width: 6rem;
-  }
-  main .card_info .card_prez span {
-    max-width: 100%;
-    font-size: 26px;
-  }
-  main .card_info .mail_card img {
-    max-width: 7rem;
-  }
-  main .card_info .mail_card span {
-    font-size: 26px;
-  }
-  main .proj_cards .project_card figure figcaption {
-    font-size: 24px;
-    padding: 6px;
-  }
-  footer .contact_card textarea {
-    font-size: 20px;
-  }
-  footer .my_info .infos {
-    font-size: 18px;
-  }
   footer .my_info .infos a img {
     max-width: 7rem;
   }
 }
 
 @media (min-width: 1000px) {
-  header .logo {
-    max-width: 8rem;
-  }
-  header .card_name .name {
-    font-size: 42px;
-  }
-  main .titre {
-    font-size: 3.5rem;
-  }
-  main .card_info .mail_card {
-    display: none;
-  }
-  main .card_info .card_prez span {
-    font-size: 1.8rem;
-  }
-  main .card_comp .card_dual:hover {
-    -webkit-transition: 1s;
-    transition: 1s;
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-  main .card_comp .card_dual span {
-    font-size: 30px;
-  }
-  main .card_comp .card_dual img {
-    max-width: 6rem;
-  }
-  main .proj_cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  main .proj_cards .marg_proj {
-    margin-left: 1.5rem;
-  }
-  main .proj_cards .project_card:hover {
-    -webkit-transition: 1s;
-    transition: 1s;
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  footer .contact_card {
-    max-width: 50%;
-  }
-  footer .my_info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 50%;
-  }
-  footer .my_info p {
-    font-size: 22px;
-    margin-bottom: 1rem;
-  }
-  footer .my_info a img {
+  footer .my_info .infos a img {
     max-width: 10rem;
     margin: .2rem;
   }
