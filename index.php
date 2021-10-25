@@ -1,3 +1,51 @@
+<?php
+
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
+if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['email']) && !empty($_POST['contact_mail']) && !empty($_POST['email']) && !empty($_POST['sender']) && empty($_POST['mail']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+
+    $message = strip_tags($_POST['contact_mail']);
+    $sender = strip_tags($_POST['sender']);
+    $email = strip_tags($_POST['email']);
+
+    require_once 'includes/connect.php';
+
+    // création requete
+    $sql = "INSERT INTO `messages` (`txtmessage`, `name`, `mail`) VALUES ('$message', '$sender', '$email');";
+
+    // préparation de la requête
+    $requete = $db->prepare($sql);
+
+    $requete->execute();
+
+    require_once "./includes/PhPMailer/Exception.php";
+    require_once "./includes/PhPMailer/PHPMailer.php";
+    require_once "./includes/PhPMailer/SMTP.php";
+
+    $mail = new PHPMailer();
+
+    try {
+        $mail->isSMTP();
+        $mail->Host = "localhost";
+        $mail->Charset = "utf-8";
+
+        $mail->addAddress("guydcx@gmail.com");
+        $mail->setFrom("g.descroix@codeur.online");
+
+        $mail->Subject = "CONTACT PORTFOLIO";
+        $mail->Body = "Le mail est envoyé par : " . $email . "\n\nSon nom est : " . $sender . "\n\nEt voici son message :\n" . $message;
+
+        $mail->send();
+        header("Location: ./index.php");
+        exit;
+    } catch (Exception $error) {
+        echo "Message non envoyé. Erreur: {$mail->ErreurInfo}";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -46,6 +94,14 @@
             <div class="card_dual">
                 <img src="./img/logo/javascript.png" alt="JS" width="100%">
                 <span>JavaScript</span>
+            </div>
+            <div class="card_dual">
+                <img src="./img/logo/php_logo.png" alt="PHP" width="100%">
+                <span>PhP</span>
+            </div>
+            <div class="card_dual">
+                <img src="./img/logo/sql_logo.png" alt="PHP" width="100%">
+                <span>MySQL</span>
             </div>
             <div class="card_dual">
                 <img src="./img/logo/bootstrap.png" alt="BSTRAP" width="100%">
@@ -107,19 +163,24 @@
     <footer>
         <div class="contact_card">
             <h1 class="contact">Contactez moi</h1>
-            <textarea name="message" id="contact_mail" cols="30" rows="10" placeholder="Votre message ..."></textarea>
-            <textarea name="botcatcher" id="botcatcher" cols="30" rows="10"></textarea>
-            <button class="my_btn" type="submit">Envoyer</button>
+            <form class="my_form" method="post">
+                <label for="sender">Nom :</label>
+                <textarea name="sender" id="sender" maxlength="50" placeholder="Votre nom"></textarea>
+                <label for="email">Email :</label>
+                <textarea name="email" id="email" maxlength="255" placeholder="Votre mail"></textarea>
+                <label for="contact_mail">Message :</label>
+                <textarea name="contact_mail" id="contact_mail" class="contact_mail" cols="30" rows="10" maxlength="880" placeholder="Votre message"></textarea>
+                <textarea name="mail" class="mail" id="mail" cols="30" rows="10"></textarea>
+                <button class="my_btn" type="submit">Envoyer</button>
+            </form>
         </div>
         <div class="my_info">
             <h1>A propos</h1>
             <div class="infos">
                 <p>Mon mail : Guydcx@gmail.com</p>
                 <p>Mes réseaux :</p>
-                <a href="" target="_blank"><img src="./img/logo/Twitter social icons - rounded square - blue.png" alt=""
-                        width="100%"></a>
-                <a href="https://www.linkedin.com/in/guy-descroix/" target="_blank"><img src="./img/logo/LI-In-Bug.png"
-                        alt="" width="100%"></a>
+                <a href="https://twitter.com/GuyDescroix" target="_blank"><img src="./img/logo/Twitter social icons - rounded square - blue.png" alt="twitter" width="100%"></a>
+                <a href="https://www.linkedin.com/in/guy-descroix/" target="_blank"><img src="./img/logo/LI-In-Bug.png" alt="linkedin" width="100%"></a>
             </div>
         </div>
     </footer>

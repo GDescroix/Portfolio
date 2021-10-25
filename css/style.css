@@ -81,13 +81,25 @@ header .card_name {
   border: solid 2px white;
   border-radius: 6px;
   cursor: pointer;
+  padding: 1.5em 2em;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  background: none;
+  border: 1px solid black;
 }
 
 header .card_name:hover {
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  background: white;
+  -webkit-box-shadow: 0 0 5px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
+          box-shadow: 0 0 5px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
+}
+
+header .card_name:hover .name {
+  color: black;
 }
 
 @media (min-width: 760px) {
@@ -250,7 +262,6 @@ main .card_comp {
   max-width: 85%;
   padding: .2rem;
   margin-bottom: 2.5rem;
-  display: flex;
   overflow-x: auto;
 }
 
@@ -282,6 +293,7 @@ main .card_comp .card_dual {
     transition: 1s;
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
+    cursor: default;
   }
 }
 
@@ -301,6 +313,12 @@ main .card_comp .card_dual span {
   }
 }
 
+@media (min-width: 1200px) {
+  main .card_comp .card_dual span {
+    font-size: 34px;
+  }
+}
+
 main .card_comp .card_dual img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,6 +332,12 @@ main .card_comp .card_dual img {
 @media (min-width: 1000px) {
   main .card_comp .card_dual img {
     max-width: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .card_comp .card_dual img {
+    max-width: 7rem;
   }
 }
 
@@ -405,36 +429,53 @@ footer .contact_card {
   padding: 5%;
 }
 
-@media (min-width: 1000px) {
-  footer .contact_card {
-    max-width: 50%;
-  }
-}
-
 footer .contact_card .contact {
   text-align: center;
   margin-bottom: 1rem;
   color: white;
 }
 
-footer .contact_card textarea {
-  width: 100%;
+footer .contact_card .my_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .contact_card .my_form label {
+  color: white;
 }
 
 @media (min-width: 760px) {
-  footer .contact_card textarea {
+  footer .contact_card .my_form label {
     font-size: 20px;
   }
 }
 
-footer .contact_card #botcatcher {
+footer .contact_card .my_form textarea {
+  resize: none;
+}
+
+@media (min-width: 760px) {
+  footer .contact_card .my_form textarea {
+    font-size: 20px;
+  }
+}
+
+footer .contact_card .my_form .mail {
   display: none;
 }
 
-footer .contact_card .my_btn {
+footer .contact_card .my_form .my_btn {
   margin-top: .5rem;
   font-size: large;
   padding: 5px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 footer .my_info {
