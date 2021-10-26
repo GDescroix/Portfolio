@@ -45,7 +45,6 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -150,13 +149,30 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
         <div class="proj_cards">
             <div class="project_card">
                 <figure>
+                    <a href="https://github.com/GDescroix/tvYonne" target="_blank">
+                        <img src="./img/tvYonne.png" alt="tvYonne" width="100%">
+                    </a>
+                    <figcaption>Projet de prototypage d'un site pour La Télé de l'Yonne.</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="proj_cards">
+            <div class="project_card">
+                <figure>
+                    <a href="https://github.com/GDescroix/Tech-ila_WordPress" target="_blank">
+                        <img src="./img/Tech-ila.png" alt="Tech-ila" width="100%">
+                    </a>
+                    <figcaption>Projet d'apprentissage de WordPress en créant un E-Commerce</figcaption>
+                </figure>
+            </div>
+            <div class="project_card marg_proj">
+                <figure>
                     <a href="https://github.com/GDescroix/SaumHotel" target="_blank">
                         <img src="./img/Hotel_M-G.png" alt="Projet Hotel" width="100%">
                     </a>
                     <figcaption>Projet de création d'un site de réservation d'hôtel fonctionnel</figcaption>
                 </figure>
             </div>
-        </div>
         </div>
     </main>
 
@@ -178,9 +194,10 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
             <h1>A propos</h1>
             <div class="infos">
                 <p>Mon mail : Guydcx@gmail.com</p>
-                <p>Mes réseaux :</p>
+                <p>Mes réseaux & mon CV :</p>
                 <a href="https://twitter.com/GuyDescroix" target="_blank"><img src="./img/logo/Twitter social icons - rounded square - blue.png" alt="twitter" width="100%"></a>
                 <a href="https://www.linkedin.com/in/guy-descroix/" target="_blank"><img src="./img/logo/LI-In-Bug.png" alt="linkedin" width="100%"></a>
+                <a href="./ressources/CV_DESCROIX_Guy.pdf" download><img src="./img/cv.png" alt="cv"></a>
             </div>
         </div>
     </footer>

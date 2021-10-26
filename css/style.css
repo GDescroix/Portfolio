@@ -129,6 +129,13 @@ header .card_name .name {
   }
 }
 
+@media (min-width: 1400px) {
+  main {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
 main .titre {
   text-align: center;
   margin-bottom: 1rem;
@@ -377,8 +384,8 @@ main .proj_cards .project_card {
   main .proj_cards .project_card:hover {
     -webkit-transition: 1s;
     transition: 1s;
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
 }
 

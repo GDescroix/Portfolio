@@ -55,9 +55,25 @@ header {
         border-radius: 6px;
         cursor: pointer;
 
+        padding: 1.5em 2em;
+        font-size: 13px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+        letter-spacing: 3px;
+        background: none;
+        border: 1px solid black;
+
         &:hover {
-            transition: 1s;
-            transform: scale(1.1);
+            background: white;
+            box-shadow: 0 0 5px white,
+                0 0 20px white,
+                0 0 20px white,
+                0 0 20px white;
+
+                .name {
+                    color: black;
+                }
         }
 
         @media (min-width: 760px) {
@@ -82,8 +98,6 @@ header {
 }
 
 main {
-    max-width: 90%;
-    margin: auto;
 
     .titre {
         text-align: center;
@@ -178,8 +192,6 @@ main {
         max-width: 85%;
         padding: .2rem;
         margin-bottom: 2.5rem;
-
-        display: flex;
         overflow-x: auto;
 
         @media (min-width: 1000px) {
@@ -210,6 +222,10 @@ main {
                 @media (min-width: 1000px) {
                     font-size: 30px;
                 }
+
+                @media (min-width: 1200px) {
+                    font-size: 34px;
+                }
             }
 
             img {
@@ -220,6 +236,10 @@ main {
 
                 @media (min-width: 1000px) {
                     max-width: 6rem;
+                }
+
+                @media (min-width: 1200px) {
+                    max-width: 7rem;
                 }
             }
         }
@@ -300,12 +320,20 @@ footer {
             display: flex;
             flex-direction: column;
 
-            .contact_mail {
+            label {
+                color: white;
+
                 @media (min-width: 760px) {
                     font-size: 20px;
                 }
+            }
 
+            textarea {
                 resize: none;
+
+                @media (min-width: 760px) {
+                    font-size: 20px;
+                }
             }
 
             .mail {
