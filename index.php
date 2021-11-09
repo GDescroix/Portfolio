@@ -13,10 +13,14 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
     require_once 'includes/connect.php';
 
     // création requete
-    $sql = "INSERT INTO `messages` (`txtmessage`, `name`, `mail`) VALUES ('$message', '$sender', '$email');";
+    $sql = "INSERT INTO `messages` (`txtmessage`, `name`, `mail`) VALUES (:message, :sender, :email);";
 
     // préparation de la requête
     $requete = $db->prepare($sql);
+
+    $requete->bindValue(':message', $message);
+    $requete->bindValue(':sender', $sender);
+    $requete->bindValue(':email', $email);
 
     $requete->execute();
 
@@ -30,12 +34,13 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
         $mail->isSMTP();
         $mail->Host = "localhost";
         $mail->Charset = "utf-8";
+        $mail->isHTML();
 
         $mail->addAddress("guydcx@gmail.com");
         $mail->setFrom("g.descroix@codeur.online");
 
         $mail->Subject = "CONTACT PORTFOLIO";
-        $mail->Body = "Le mail est envoyé par : " . $email . "\n\nSon nom est : " . $sender . "\n\nEt voici son message :\n" . $message;
+        $mail->Body = '<h1>Le mail est envoyé par : ' . $email . '</h1>' . '<h2>Son nom est : ' . $sender . '</h2>' . '<h3>Et voici son message :' . "\n" . $message . "</h3>";
 
         $mail->send();
         header("Location: ./index.php");
@@ -69,7 +74,6 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
     </header>
 
     <main>
-
         <h1 class="titre">Présentation</h1>
         <div class="card_info">
             <div class="card_prez">
@@ -81,60 +85,60 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
         </div>
 
         <h1 class="titre">Compétences</h1>
-        <div class="card_comp">
-            <div class="card_dual first_card_dual">
+        <section class="card_comp">
+            <article class="card_dual first_card_dual">
                 <img src="./img/logo/html5.png" alt="HTML5" width="100%">
                 <span>HTML5</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/css3.png" alt="CSS3" width="100%">
                 <span>CSS3</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/javascript.png" alt="JS" width="100%">
                 <span>JavaScript</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/php_logo.png" alt="PHP" width="100%">
                 <span>PhP</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/sql_logo.png" alt="PHP" width="100%">
                 <span>MySQL</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/bootstrap.png" alt="BSTRAP" width="100%">
                 <span>Bootstrap</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/wrdprss.png" alt="WordPress" width="100%">
                 <span>WordPress</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/ghub.png" alt="GitKraken" width="100%">
                 <span>Github</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/gimp.png" alt="Gimp" width="100%">
                 <span>Gimp</span>
-            </div>
-            <div class="card_dual">
+            </article>
+            <article class="card_dual">
                 <img src="./img/logo/inkscape.png" alt="Inkscape" width="100%">
                 <span>Inkscape</span>
-            </div>
-        </div>
+            </article>
+        </section>
 
         <h1 class="titre">Projets</h1>
-        <div class="proj_cards">
-            <div class="project_card">
+        <section class="proj_cards">
+            <article class="project_card">
                 <figure>
                     <a href="https://github.com/GDescroix/projet_presentation" target="_blank">
                         <img src="./img/PrezGuyChris.png" alt="projetPrez" width="100%">
                     </a>
                     <figcaption>Projet de présentation et de découverte du HTML/CSS</figcaption>
                 </figure>
-            </div>
-            <div class="project_card marg_proj">
+            </article>
+            <article class="project_card marg_proj">
                 <figure>
                     <a href="https://github.com/GDescroix/ACS_Music" class="car_card" target="_blank">
                         <img src="./img/ACS_MUSIC/index.png" alt="ACS_MUSIC" width="100%">
@@ -144,36 +148,36 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
                     <figcaption>Projet de site web au format mobile permettant d'écouter des musiques via une API
                     </figcaption>
                 </figure>
-            </div>
-        </div>
-        <div class="proj_cards">
-            <div class="project_card">
+            </article>
+        </section>
+        <section class="proj_cards">
+            <article class="project_card">
                 <figure>
                     <a href="https://github.com/GDescroix/tvYonne" target="_blank">
                         <img src="./img/tvYonne.png" alt="tvYonne" width="100%">
                     </a>
                     <figcaption>Projet de prototypage d'un site pour La Télé de l'Yonne.</figcaption>
                 </figure>
-            </div>
-        </div>
-        <div class="proj_cards">
-            <div class="project_card">
+            </article>
+        </section>
+        <section class="proj_cards">
+            <article class="project_card">
                 <figure>
                     <a href="https://github.com/GDescroix/Tech-ila_WordPress" target="_blank">
                         <img src="./img/Tech-ila.png" alt="Tech-ila" width="100%">
                     </a>
                     <figcaption>Projet d'apprentissage de WordPress en créant un E-Commerce</figcaption>
                 </figure>
-            </div>
-            <div class="project_card marg_proj">
+            </article>
+            <article class="project_card marg_proj">
                 <figure>
                     <a href="https://github.com/GDescroix/SaumHotel" target="_blank">
                         <img src="./img/Hotel_M-G.png" alt="Projet Hotel" width="100%">
                     </a>
                     <figcaption>Projet de création d'un site de réservation d'hôtel fonctionnel</figcaption>
                 </figure>
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
 
     <footer>
@@ -197,11 +201,10 @@ if (isset($_POST['contact_mail'], $_POST['mail'], $_POST['sender'], $_POST['emai
                 <p>Mes réseaux & mon CV :</p>
                 <a href="https://twitter.com/GuyDescroix" target="_blank"><img src="./img/logo/Twitter social icons - rounded square - blue.png" alt="twitter" width="100%"></a>
                 <a href="https://www.linkedin.com/in/guy-descroix/" target="_blank"><img src="./img/logo/LI-In-Bug.png" alt="linkedin" width="100%"></a>
-                <a href="./ressources/CV_DESCROIX_Guy.pdf" download><img src="./img/cv.png" alt="cv"></a>
+                <a href="./ressources/CV_DESCROIX_Guy.pdf" download><img src="./img/cv.png" alt="cv" class="cv"></a>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

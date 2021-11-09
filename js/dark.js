@@ -32,7 +32,7 @@ drk.addEventListener("click", function () {
         f_head.style.background = "grey";
         f_body.style.color = "black";
         f_body.style.background = "white";
-        f_foot.style.background = "black";
+        f_foot.style.background = "grey";
         for (let cnt = 0; comps[cnt]; cnt += 1) {
             comps[cnt].style.background = "none";
         }

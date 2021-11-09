@@ -71,9 +71,9 @@ header {
                 0 0 20px white,
                 0 0 20px white;
 
-                .name {
-                    color: black;
-                }
+            .name {
+                color: black;
+            }
         }
 
         @media (min-width: 760px) {
@@ -98,6 +98,10 @@ header {
 }
 
 main {
+    @media (min-width: 1400px) {
+        max-width: 90%;
+        margin: auto;
+    }
 
     .titre {
         text-align: center;
@@ -193,6 +197,8 @@ main {
         padding: .2rem;
         margin-bottom: 2.5rem;
         overflow-x: auto;
+        scrollbar-color: rgb(43, 43, 43) rgb(151, 151, 151);
+        scrollbar-width: thin;
 
         @media (min-width: 1000px) {
             margin-top: 0;
@@ -271,12 +277,12 @@ main {
             @media (min-width: 1000px) {
                 &:hover {
                     transition: 1s;
-                    transform: scale(1.05);
+                    transform: scale(1.02);
                 }
             }
 
             figure {
-                border: solid 4px #ff5d00;
+                border: solid 2px #ff5d00;
 
                 .car_card {
                     display: flex;
@@ -299,7 +305,7 @@ main {
 }
 
 footer {
-    background-color: black;
+    background-color: grey;
 
     @media (min-width: 1000px) {
         display: flex;
@@ -322,6 +328,7 @@ footer {
 
             label {
                 color: white;
+                margin-top: 3%;
 
                 @media (min-width: 760px) {
                     font-size: 20px;
@@ -368,6 +375,7 @@ footer {
         .infos {
             border: solid 2px white;
             padding: 6px;
+            justify-content: space-evenly;
 
             @media (min-width: 760px) {
                 font-size: 18px;
@@ -393,6 +401,18 @@ footer {
                     @media (min-width: 1000px) {
                         max-width: 10rem;
                         margin: .2rem;
+                    }
+                }
+
+                .cv {
+                    max-height: 3rem;
+
+                    @media (min-width: 760px) {
+                        max-height: 7rem;
+                    }
+
+                    @media (min-width: 1000px) {
+                        max-height: 10rem;
                     }
                 }
             }
